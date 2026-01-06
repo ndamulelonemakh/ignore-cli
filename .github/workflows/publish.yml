@@ -11,6 +11,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: default
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -39,5 +40,7 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Publish to npm (Trusted Publisher)
+      - name: Publish to npm
         run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
