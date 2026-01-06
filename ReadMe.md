@@ -1,7 +1,7 @@
 # ignore-cli
 
 [![CI](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/ignore-cli.svg)](https://www.npmjs.com/package/ignore-cli)
+[![npm version](https://img.shields.io/npm/v/@ndamulelonemakh/ignore-cli.svg)](https://www.npmjs.com/package/@ndamulelonemakh/ignore-cli)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 
 A fast command line tool for adding `.gitignore` and `.dockerignore` files to your project.
@@ -18,10 +18,10 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ```bash
 # Install globally from npm
-npm install -g ignore-cli
+npm install -g @ndamulelonemakh/ignore-cli
 
 # Or run directly with npx
-npx ignore-cli add Python
+npx @ndamulelonemakh/ignore-cli add Python
 ```
 
 ## Usage

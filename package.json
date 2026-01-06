@@ -1,5 +1,5 @@
 {
-  "name": "ignore-cli",
+  "name": "@ndamulelonemakh/ignore-cli",
   "version": "1.0.0",
   "description": "A convenient command line tool for adding .ignore files to your project",
   "type": "module",
