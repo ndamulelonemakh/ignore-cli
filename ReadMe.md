@@ -88,27 +88,27 @@ ignore add Python
 git clone https://github.com/ndamulelonemakh/ignore-cli.git
 cd ignore-cli
 
-# Install dependencies
-npm install
+# Install dependencies (using pnpm)
+pnpm install
 
 # Build the project
-npm run build
+pnpm run build
 
 # Run tests
-npm run test
+pnpm run test
 
 # Run the CLI locally
-npm start -- add Python
+pnpm start -- add Python
 ```
 
 ## Scripts
 
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm run dev` - Watch mode for development
-- `npm run test` - Run tests
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run typecheck` - Run TypeScript type checker
+- `pnpm run build` - Compile TypeScript to JavaScript
+- `pnpm run dev` - Watch mode for development
+- `pnpm run test` - Run tests
+- `pnpm run check` - Run Biome (lint + format check)
+- `pnpm run check:fix` - Fix lint and format issues with Biome
+- `pnpm run typecheck` - Run TypeScript type checker
 
 ## License
 

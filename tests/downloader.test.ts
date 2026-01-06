@@ -1,8 +1,8 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import * as fs from "node:fs";
-import * as path from "node:path";
 import * as os from "node:os";
-import { ensureDirectory, fileExists, buildDownloadUrl, getOutputPath } from "../src/downloader.js";
+import * as path from "node:path";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { buildDownloadUrl, ensureDirectory, fileExists, getOutputPath } from "../src/downloader.js";
 
 describe("downloader", () => {
   let tempDir: string;

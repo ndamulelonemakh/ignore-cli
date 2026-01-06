@@ -1,8 +1,8 @@
 import * as fs from "node:fs";
-import * as path from "node:path";
 import * as https from "node:https";
+import * as path from "node:path";
+import { findTemplate, outputFilenames, serviceUrls } from "./templates.js";
 import type { DownloadConfig, DownloadResult, Service } from "./types.js";
-import { findTemplate, serviceUrls, outputFilenames } from "./templates.js";
 
 /**
  * Ensure the download directory exists, creating it if necessary
@@ -48,7 +48,6 @@ export function downloadFile(url: string, destPath: string): Promise<void> {
 
     https
       .get(url, (response) => {
-        // Handle redirects
         if (response.statusCode === 301 || response.statusCode === 302) {
           const redirectUrl = response.headers.location;
           if (redirectUrl) {
@@ -59,7 +58,6 @@ export function downloadFile(url: string, destPath: string): Promise<void> {
           }
         }
 
-        // Handle 404 and other errors
         if (response.statusCode !== 200) {
           file.close();
           fs.unlinkSync(destPath);
@@ -98,7 +96,6 @@ export function downloadFile(url: string, destPath: string): Promise<void> {
 export async function downloadIgnoreFile(config: DownloadConfig): Promise<DownloadResult> {
   const { language, service, outputDir, force } = config;
 
-  // Find the template
   const template = findTemplate(language);
   if (!template) {
     return {
@@ -107,7 +104,6 @@ export async function downloadIgnoreFile(config: DownloadConfig): Promise<Downlo
     };
   }
 
-  // Ensure output directory exists
   try {
     ensureDirectory(outputDir);
   } catch {
@@ -117,7 +113,6 @@ export async function downloadIgnoreFile(config: DownloadConfig): Promise<Downlo
     };
   }
 
-  // Check for existing file
   const outputPath = getOutputPath(outputDir, service);
   if (fileExists(outputPath) && !force) {
     return {
@@ -127,7 +122,6 @@ export async function downloadIgnoreFile(config: DownloadConfig): Promise<Downlo
     };
   }
 
-  // Build URL and download
   const url = buildDownloadUrl(template.filename, service);
 
   try {

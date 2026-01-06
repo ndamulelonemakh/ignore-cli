@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { Command } from "commander";
-import chalk from "chalk";
-import ora from "ora";
 import * as readline from "node:readline";
+import chalk from "chalk";
+import { Command } from "commander";
+import ora from "ora";
 import { downloadIgnoreFile, fileExists, getOutputPath } from "./downloader.js";
-import { templates, getAllTemplates, getTemplateNames } from "./templates.js";
+import { getAllTemplates, getTemplateNames, templates } from "./templates.js";
 import type { Service } from "./types.js";
 
 const program = new Command();
@@ -38,30 +38,27 @@ async function handleAddCommand(
 ): Promise<void> {
   const spinner = ora();
 
-  // Validate service
   const validServices = ["git", "docker"];
   if (!validServices.includes(options.service)) {
     console.error(
       chalk.red(`Error: Invalid service "${options.service}".\n`) +
-        chalk.yellow("Valid services are: git, docker")
+      chalk.yellow("Valid services are: git, docker")
     );
     process.exit(1);
   }
   const service = options.service as Service;
 
-  // Validate language
   const templateNames = getTemplateNames();
   const normalizedLanguage = templateNames.find((t) => t.toLowerCase() === language.toLowerCase());
 
   if (!normalizedLanguage) {
     console.error(
       chalk.red(`Error: Unknown template "${language}".\n`) +
-        chalk.yellow('Use "ignore list" to see available templates.')
+      chalk.yellow('Use "ignore list" to see available templates.')
     );
     process.exit(1);
   }
 
-  // Check if file exists and prompt for confirmation if not using --force
   const outputPath = getOutputPath(options.out, service);
   if (fileExists(outputPath) && !options.force) {
     const shouldOverwrite = await confirm(
@@ -103,19 +100,19 @@ function handleListCommand(): void {
   console.log(chalk.bold("\n📋 Available Templates\n"));
 
   console.log(chalk.cyan.bold("Languages:"));
-  templates.languages.forEach((t) => {
+  for (const t of templates.languages) {
     console.log(`  ${chalk.green("•")} ${t.name.padEnd(20)} ${chalk.dim(t.description || "")}`);
-  });
+  }
 
   console.log(chalk.cyan.bold("\nFrameworks:"));
-  templates.frameworks.forEach((t) => {
+  for (const t of templates.frameworks) {
     console.log(`  ${chalk.green("•")} ${t.name.padEnd(20)} ${chalk.dim(t.description || "")}`);
-  });
+  }
 
   console.log(chalk.cyan.bold("\nTools:"));
-  templates.tools.forEach((t) => {
+  for (const t of templates.tools) {
     console.log(`  ${chalk.green("•")} ${t.name.padEnd(20)} ${chalk.dim(t.description || "")}`);
-  });
+  }
 
   console.log(chalk.dim(`\nTotal: ${getAllTemplates().length} templates available`));
 }
@@ -137,19 +134,17 @@ function handleSearchCommand(query: string): void {
   }
 
   console.log(chalk.bold(`\n🔍 Search results for "${query}":\n`));
-  results.forEach((t) => {
+  for (const t of results) {
     console.log(`  ${chalk.green("•")} ${t.name.padEnd(20)} ${chalk.dim(t.description || "")}`);
-  });
+  }
   console.log(chalk.dim(`\nFound: ${results.length} template(s)`));
 }
 
-// Program setup
 program
   .name("ignore")
   .description("A fast CLI tool for adding .ignore files to your project")
   .version("1.0.0");
 
-// Add command
 program
   .command("add <language>")
   .description("Download and add an ignore file template")
@@ -158,21 +153,18 @@ program
   .option("-f, --force", "Overwrite existing file without prompting", false)
   .action(handleAddCommand);
 
-// List command
 program
   .command("list")
   .alias("ls")
   .description("List all available templates")
   .action(handleListCommand);
 
-// Search command
 program
   .command("search <query>")
   .alias("find")
   .description("Search for templates by name or description")
   .action(handleSearchCommand);
 
-// Make add the default command for backward compatibility
 program
   .command("get <language>", { hidden: true })
   .option("-s, --service <type>", "Service type (git or docker)", "git")
@@ -180,5 +172,4 @@ program
   .option("-f, --force", "Overwrite existing file without prompting", false)
   .action(handleAddCommand);
 
-// Parse arguments
 program.parse();

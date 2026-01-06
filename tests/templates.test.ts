@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
-  templates,
+  findTemplate,
   getAllTemplates,
   getTemplateNames,
-  findTemplate,
-  serviceUrls,
   outputFilenames,
+  serviceUrls,
+  templates,
 } from "../src/templates.js";
 
 describe("templates", () => {
