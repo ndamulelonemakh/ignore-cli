@@ -12,6 +12,8 @@ const program = new Command();
 
 /**
  * Prompt user for confirmation
+ * @param message - The confirmation message to display
+ * @returns Promise that resolves to true if user confirms (y/yes), false otherwise
  */
 async function confirm(message: string): Promise<boolean> {
   const rl = readline.createInterface({

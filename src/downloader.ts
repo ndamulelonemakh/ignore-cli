@@ -22,9 +22,13 @@ export function fileExists(filePath: string): boolean {
 
 /**
  * Build the download URL for a template
+ * @param templateFilename - The filename of the template to download
+ * @param _service - Service type (currently unused as all services use the same GitHub source)
+ * @returns The full URL to download the template
  */
 export function buildDownloadUrl(templateFilename: string, _service: Service): string {
-  const baseUrl = serviceUrls.git; // Both services use the same source
+  // Both git and docker services use the same GitHub gitignore repository
+  const baseUrl = serviceUrls.git;
   return `${baseUrl}/${templateFilename}`;
 }
 
