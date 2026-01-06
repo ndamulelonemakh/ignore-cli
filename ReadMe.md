@@ -1,44 +1,115 @@
-# Ignore - CLI (Work in progress)
+# ignore-cli
 
-* A fast command line tool for adding .ignore files to your project
-    - For example, .gitignore for [git](https://git-scm.com/) repositories, or .dockerignore for [docker](https://www.docker.com/get-started) projects
+[![CI](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml)
+
+A fast command line tool for adding `.gitignore` and `.dockerignore` files to your project.
+
+## Features
+
+- 📥 Download ignore file templates for 24+ languages, frameworks, and tools
+- 🔍 Search and discover available templates
+- 🐳 Support for both Git and Docker ignore files
+- ⚡ Fast downloads from GitHub's official gitignore repository
+- 🎨 Beautiful CLI output with colors and spinners
+
+## Installation
+
+```bash
+# Install globally from npm
+npm install -g ignore-cli
+
+# Or run directly with npx
+npx ignore-cli add Python
+```
 
 ## Usage
 
-* ignore [-s][--service] [-o][--out] [--local] \<language\>
-    - language     : [Required] Specify the language e.g. Python, NodeJs, C++ 
-    - --service/-s : [Optional] The service or platform you are working on e.g. Git or Docker
-    - --local      : [Optional] Add from your own local .ignore repository
-    - --out/-o     : [Optional] Where the .ignore files should be downloaded to e.g. src/ or /path/to/project/src
-
-
+### Add an ignore file
 
 ```bash
-# Example 1: Add a .gitignore file for Python project
-ignore Python  # Or ignore --service git Python
+# Add a .gitignore file for Python
+ignore add Python
 
-# Example 2: Add a Python ignore file for a *docker* (specified with option -s or --service) projectt
-ignore -s docker Python
+# Add a .dockerignore file for Node.js
+ignore add Node --service docker
 
-# Example 3: Coming soon....
-ignore --local MyCustomIgnorTemplate
+# Specify output directory
+ignore add Go --out ./my-project
+
+# Force overwrite existing file
+ignore add Rust --force
 ```
+
+### List available templates
+
+```bash
+# List all available templates
+ignore list
+
+# Or use the alias
+ignore ls
+```
+
+### Search for templates
+
+```bash
+# Search by name or description
+ignore search python
+
+# Or use the alias
+ignore find node
+```
+
+## Available Templates
+
+### Languages
+C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml
+
+### Frameworks
+Node, Android, Rails, Laravel, Flutter
+
+### Tools
+VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs
 
 ## How it works
 
-* The project is based on the public github repositories that contain a collection of common .ignore files
+Templates are downloaded on-demand from GitHub's official [gitignore repository](https://github.com/github/gitignore).
 
-* The templates are downloaded on-demand from github using *HTTPS*
-
-```bash 
-# For example, 
-ignore -s docker Dart
-# this command will make a Get request to https://raw.githubusercontent.com/github/gitignore/main/Dart.gitignore
-# By default the file will be downloaded to the current working directory
+```bash
+# Example: Download Python gitignore
+ignore add Python
+# Downloads from: https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
 ```
 
+## Development
 
-## List Of Supported platforms
+```bash
+# Clone the repository
+git clone https://github.com/ndamulelonemakh/ignore-cli.git
+cd ignore-cli
 
-* git    - Get .gitignore files
-* Docker - Get .dockerignore files
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Run tests
+npm run test
+
+# Run the CLI locally
+npm start -- add Python
+```
+
+## Scripts
+
+- `npm run build` - Compile TypeScript to JavaScript
+- `npm run dev` - Watch mode for development
+- `npm run test` - Run tests
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run typecheck` - Run TypeScript type checker
+
+## License
+
+ISC © [endeesa (@NdamuleloNemakh)](https://github.com/ndamulelonemakh)

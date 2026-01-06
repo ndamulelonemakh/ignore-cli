@@ -2,23 +2,59 @@
   "name": "ignore-cli",
   "version": "1.0.0",
   "description": "A fast command line tool for adding .ignore files to your project",
-  "main": "bin/ignore-cli.js",
+  "type": "module",
+  "main": "dist/index.js",
   "bin": {
-    "ign": "bin/ignore-cli.js",
-    "ignore": "bin/ignore-cli.js"
+    "ign": "dist/cli.js",
+    "ignore": "dist/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node bin/ignore-cli.js"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint src tests --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "gitignore",
     "dockerignore",
-    "ignore-cli"
+    "ignore-cli",
+    "cli",
+    "templates"
   ],
   "author": "endeesa (@NdamuleloNemakh)",
   "license": "ISC",
-  "dependencies": {
-    "yargs": "^17.3.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndamulelonemakh/ignore-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndamulelonemakh/ignore-cli/issues"
+  },
+  "homepage": "https://github.com/ndamulelonemakh/ignore-cli#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "chalk": "^5.4.1",
+    "commander": "^13.0.0",
+    "eslint": "^9.17.0",
+    "ora": "^8.1.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.26.0",
+    "vitest": "^3.0.5"
   }
 }
