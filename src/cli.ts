@@ -42,7 +42,7 @@ async function handleAddCommand(
   if (!validServices.includes(options.service)) {
     console.error(
       chalk.red(`Error: Invalid service "${options.service}".\n`) +
-      chalk.yellow("Valid services are: git, docker")
+        chalk.yellow("Valid services are: git, docker")
     );
     process.exit(1);
   }
@@ -54,7 +54,7 @@ async function handleAddCommand(
   if (!normalizedLanguage) {
     console.error(
       chalk.red(`Error: Unknown template "${language}".\n`) +
-      chalk.yellow('Use "ignore list" to see available templates.')
+        chalk.yellow('Use "ignore list" to see available templates.')
     );
     process.exit(1);
   }

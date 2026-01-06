@@ -22,14 +22,17 @@
     "check": "biome check ./src ./tests",
     "check:fix": "biome check --write ./src ./tests",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [
     "gitignore",
     "dockerignore",
+    "ignore",
     "ignore-cli",
     "cli",
-    "templates"
+    "templates",
+    "generator",
+    "github"
   ],
   "author": "endeesa (@NdamuleloNemakh)",
   "license": "ISC",
@@ -46,7 +49,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "ReadMe.md",
+    "LICENSE"
   ],
   "dependencies": {
     "chalk": "^5.4.1",

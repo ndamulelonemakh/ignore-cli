@@ -1,6 +1,8 @@
 # ignore-cli
 
 [![CI](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/ndamulelonemakh/ignore-cli/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/ignore-cli.svg)](https://www.npmjs.com/package/ignore-cli)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 
 A fast command line tool for adding `.gitignore` and `.dockerignore` files to your project.
 
@@ -29,6 +31,9 @@ npx ignore-cli add Python
 ```bash
 # Add a .gitignore file for Python
 ignore add Python
+
+# Or use the short alias
+ign add Python
 
 # Add a .dockerignore file for Node.js
 ignore add Node --service docker
@@ -110,6 +115,16 @@ pnpm start -- add Python
 - `pnpm run check:fix` - Fix lint and format issues with Biome
 - `pnpm run typecheck` - Run TypeScript type checker
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
-ISC © [endeesa (@NdamuleloNemakh)](https://github.com/ndamulelonemakh)
+ISC © [@NdamuleloNemakh](https://github.com/ndamulelonemakh)
