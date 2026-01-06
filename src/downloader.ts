@@ -27,7 +27,6 @@ export function fileExists(filePath: string): boolean {
  * @returns The full URL to download the template
  */
 export function buildDownloadUrl(templateFilename: string, _service: Service): string {
-  // Both git and docker services use the same GitHub gitignore repository
   const baseUrl = serviceUrls.git;
   return `${baseUrl}/${templateFilename}`;
 }
