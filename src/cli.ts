@@ -166,6 +166,15 @@ program
   .action(handleSearchCommand);
 
 program
+  .command("docker <language>")
+  .description("Download and add a .dockerignore template (shorthand for add --service docker)")
+  .option("-o, --out <directory>", "Output directory", process.cwd())
+  .option("-f, --force", "Overwrite existing file without prompting", false)
+  .action((language: string, options: { out: string; force: boolean }) =>
+    handleAddCommand(language, { ...options, service: "docker" })
+  );
+
+program
   .command("get <language>", { hidden: true })
   .option("-s, --service <type>", "Service type (git or docker)", "git")
   .option("-o, --out <directory>", "Output directory", process.cwd())
