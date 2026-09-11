@@ -50,6 +50,27 @@ describe("templates", () => {
     });
   });
 
+  describe("Global/ editor and OS templates", () => {
+    it("should reference filenames under the Global/ directory for editor and OS tools", () => {
+      // These upstream files live under github/gitignore's Global/ directory, not the repo root.
+      for (const name of [
+        "VisualStudioCode",
+        "JetBrains",
+        "Vim",
+        "Emacs",
+        "Xcode",
+        "Eclipse",
+        "macOS",
+        "Windows",
+        "Linux",
+      ]) {
+        const template = findTemplate(name);
+        expect(template).toBeDefined();
+        expect(template?.filename).toBe(`Global/${name}.gitignore`);
+      }
+    });
+  });
+
   describe("getTemplateNames", () => {
     it("should return an array of template names", () => {
       const names = getTemplateNames();
