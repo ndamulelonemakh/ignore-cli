@@ -24,7 +24,10 @@ export const templates: TemplateList = {
     { name: "Julia", filename: "Julia.gitignore", description: "Julia projects" },
     { name: "Lua", filename: "Lua.gitignore", description: "Lua projects" },
     { name: "Elm", filename: "Elm.gitignore", description: "Elm projects" },
-    { name: "Clojure", filename: "Clojure.gitignore", description: "Clojure projects" },
+    // Note: Clojure.gitignore is intentionally omitted. Upstream
+    // github/gitignore's Clojure.gitignore file contains only the literal
+    // placeholder text "Leiningen.gitignore" (not real ignore rules), so it
+    // was excluded until upstream fixes the file (verified 2026-09-11).
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
