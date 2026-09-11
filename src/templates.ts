@@ -31,10 +31,17 @@ export const templates: TemplateList = {
       filename: "Objective-C.gitignore",
       description: "Objective-C projects",
     },
-    // Note: Clojure.gitignore is intentionally omitted. Upstream
-    // github/gitignore's Clojure.gitignore file contains only the literal
-    // placeholder text "Leiningen.gitignore" (not real ignore rules), so it
-    // was excluded until upstream fixes the file (verified 2026-09-11).
+    { name: "Erlang", filename: "Erlang.gitignore", description: "Erlang projects" },
+    { name: "Perl", filename: "Perl.gitignore", description: "Perl projects" },
+    { name: "Racket", filename: "Racket.gitignore", description: "Racket projects" },
+    // Note: Upstream Clojure.gitignore and Fortran.gitignore are symlinks
+    // whose raw GitHub content is just the literal target filename text
+    // (not real ignore rules). We point these entries directly at their
+    // real symlink targets (Leiningen.gitignore and C++.gitignore
+    // respectively) so the CLI downloads working content (verified 2026-09-11).
+    { name: "Clojure", filename: "Leiningen.gitignore", description: "Clojure/Leiningen projects" },
+    { name: "Leiningen", filename: "Leiningen.gitignore", description: "Leiningen build tool" },
+    { name: "Fortran", filename: "C++.gitignore", description: "Fortran projects" },
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
@@ -49,6 +56,15 @@ export const templates: TemplateList = {
     { name: "Unity", filename: "Unity.gitignore", description: "Unity game engine projects" },
     { name: "Godot", filename: "Godot.gitignore", description: "Godot game engine projects" },
     { name: "Nestjs", filename: "Nestjs.gitignore", description: "NestJS projects" },
+    { name: "Dotnet", filename: "Dotnet.gitignore", description: ".NET projects" },
+    { name: "bun", filename: "bun.gitignore", description: "Bun runtime projects" },
+    { name: "Composer", filename: "Composer.gitignore", description: "PHP Composer projects" },
+    { name: "Symfony", filename: "Symfony.gitignore", description: "Symfony PHP framework" },
+    { name: "WordPress", filename: "WordPress.gitignore", description: "WordPress projects" },
+    { name: "Drupal", filename: "Drupal.gitignore", description: "Drupal projects" },
+    { name: "Jekyll", filename: "Jekyll.gitignore", description: "Jekyll static site projects" },
+    { name: "Sass", filename: "Sass.gitignore", description: "Sass/SCSS stylesheets" },
+    { name: "Firebase", filename: "Firebase.gitignore", description: "Firebase projects" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },

@@ -8,7 +8,7 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ## Features
 
-- 📥 Download ignore file templates for 46+ languages, frameworks, and tools
+- 📥 Download ignore file templates for 61+ languages, frameworks, and tools
 - 🔍 Search and discover available templates
 - 🐳 Support for both Git and Docker ignore files
 - ⚡ Fast downloads from GitHub's official gitignore repository
@@ -68,10 +68,10 @@ ignore find node
 ## Available Templates
 
 ### Languages
-C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C
+C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C, Erlang, Perl, Racket, Clojure, Leiningen, Fortran
 
 ### Frameworks
-Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs
+Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase
 
 ### Tools
 VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake

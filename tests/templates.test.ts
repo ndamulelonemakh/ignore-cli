@@ -87,6 +87,40 @@ describe("templates", () => {
         expect(names).toContain(name);
       }
     });
+
+    it("should include Erlang, Perl, Racket, Clojure, Leiningen, Fortran, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase", () => {
+      const names = getTemplateNames();
+      for (const name of [
+        "Erlang",
+        "Perl",
+        "Racket",
+        "Clojure",
+        "Leiningen",
+        "Fortran",
+        "Dotnet",
+        "bun",
+        "Composer",
+        "Symfony",
+        "WordPress",
+        "Drupal",
+        "Jekyll",
+        "Sass",
+        "Firebase",
+      ]) {
+        expect(names).toContain(name);
+      }
+    });
+  });
+
+  describe("symlinked upstream templates", () => {
+    it("should point Clojure and Fortran at their real (non-symlink) upstream content files", () => {
+      // Upstream github/gitignore's Clojure.gitignore and Fortran.gitignore are
+      // symlinks; GitHub's raw content endpoint returns the literal target
+      // filename text for symlinks rather than resolved content. Point these
+      // entries directly at the real target files instead.
+      expect(findTemplate("Clojure")?.filename).toBe("Leiningen.gitignore");
+      expect(findTemplate("Fortran")?.filename).toBe("C++.gitignore");
+    });
   });
 
   describe("getTemplateNames", () => {
