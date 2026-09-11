@@ -176,6 +176,52 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-11 batch 4", () => {
+    it("should include Actionscript, Agda, Coq, Gleam, Idris, Lean with correct filenames", () => {
+      const expected: Record<string, string> = {
+        Actionscript: "Actionscript.gitignore",
+        Agda: "Agda.gitignore",
+        Coq: "Coq.gitignore",
+        Gleam: "Gleam.gitignore",
+        Idris: "Idris.gitignore",
+        Lean: "Lean.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include AppEngine, Ballerina, Phalcon, PlayFramework, Prestashop, ReScript, Yii with correct filenames", () => {
+      const expected: Record<string, string> = {
+        AppEngine: "AppEngine.gitignore",
+        Ballerina: "Ballerina.gitignore",
+        Phalcon: "Phalcon.gitignore",
+        PlayFramework: "PlayFramework.gitignore",
+        Prestashop: "Prestashop.gitignore",
+        ReScript: "ReScript.gitignore",
+        Yii: "Yii.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau with correct filenames", () => {
+      const expected: Record<string, string> = {
+        GitBook: "GitBook.gitignore",
+        GitHubPages: "GitHubPages.gitignore",
+        JBoss: "JBoss.gitignore",
+        KiCad: "KiCad.gitignore",
+        TurboGears2: "TurboGears2.gitignore",
+        ExtJs: "ExtJs.gitignore",
+        Luau: "Luau.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+  });
+
   describe("symlinked upstream templates", () => {
     it("should point Clojure and Fortran at their real (non-symlink) upstream content files", () => {
       // Upstream github/gitignore's Clojure.gitignore and Fortran.gitignore are

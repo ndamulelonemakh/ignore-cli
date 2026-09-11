@@ -8,7 +8,7 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ## Features
 
-- 📥 Download ignore file templates for 96+ languages, frameworks, and tools
+- 📥 Download ignore file templates for 116+ languages, frameworks, and tools
 - 🔍 Search and discover available templates
 - 🐳 Support for both Git and Docker ignore files
 - ⚡ Fast downloads from GitHub's official gitignore repository
@@ -68,13 +68,13 @@ ignore find node
 ## Available Templates
 
 ### Languages
-C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C, Erlang, Perl, Racket, Clojure, Leiningen, Fortran, CUDA, D, Delphi, Haxe, Nix, TeX, CommonLisp, Ada, Raku, Scheme, Smalltalk, PureScript, Processing
+C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C, Erlang, Perl, Racket, Clojure, Leiningen, Fortran, CUDA, D, Delphi, Haxe, Nix, TeX, CommonLisp, Ada, Raku, Scheme, Smalltalk, PureScript, Processing, Actionscript, Agda, Coq, Gleam, Idris, Lean
 
 ### Frameworks
-Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase, Magento, Salesforce, Grails, ExpressionEngine, Joomla, LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo
+Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase, Magento, Salesforce, Grails, ExpressionEngine, Joomla, LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo, AppEngine, Ballerina, Phalcon, PlayFramework, Prestashop, ReScript, Yii
 
 ### Tools
-VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf
+VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf, GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau
 
 ## How it works
 
