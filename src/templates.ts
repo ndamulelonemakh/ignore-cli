@@ -49,6 +49,16 @@ export const templates: TemplateList = {
     { name: "Nix", filename: "Nix.gitignore", description: "Nix language projects" },
     { name: "TeX", filename: "TeX.gitignore", description: "TeX/LaTeX documents" },
     { name: "CommonLisp", filename: "CommonLisp.gitignore", description: "Common Lisp projects" },
+    { name: "Ada", filename: "Ada.gitignore", description: "Ada language projects" },
+    { name: "Raku", filename: "Raku.gitignore", description: "Raku (Perl 6) projects" },
+    { name: "Scheme", filename: "Scheme.gitignore", description: "Scheme language projects" },
+    { name: "Smalltalk", filename: "Smalltalk.gitignore", description: "Smalltalk projects" },
+    { name: "PureScript", filename: "PureScript.gitignore", description: "PureScript projects" },
+    {
+      name: "Processing",
+      filename: "Processing.gitignore",
+      description: "Processing language projects",
+    },
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
@@ -85,6 +95,34 @@ export const templates: TemplateList = {
       description: "ExpressionEngine CMS",
     },
     { name: "Joomla", filename: "Joomla.gitignore", description: "Joomla CMS projects" },
+    { name: "LangChain", filename: "LangChain.gitignore", description: "LangChain AI projects" },
+    {
+      name: "UnrealEngine",
+      filename: "UnrealEngine.gitignore",
+      description: "Unreal Engine game projects",
+    },
+    { name: "ROS", filename: "ROS.gitignore", description: "Robot Operating System projects" },
+    { name: "CakePHP", filename: "CakePHP.gitignore", description: "CakePHP framework projects" },
+    {
+      name: "CodeIgniter",
+      filename: "CodeIgniter.gitignore",
+      description: "CodeIgniter PHP framework",
+    },
+    { name: "Kohana", filename: "Kohana.gitignore", description: "Kohana PHP framework" },
+    { name: "Typo3", filename: "Typo3.gitignore", description: "TYPO3 CMS projects" },
+    { name: "Yeoman", filename: "Yeoman.gitignore", description: "Yeoman scaffolding tool" },
+    {
+      name: "ZendFramework",
+      filename: "ZendFramework.gitignore",
+      description: "Zend Framework PHP projects",
+    },
+    {
+      name: "OpenCart",
+      filename: "OpenCart.gitignore",
+      description: "OpenCart e-commerce projects",
+    },
+    { name: "Plone", filename: "Plone.gitignore", description: "Plone CMS projects" },
+    { name: "Xojo", filename: "Xojo.gitignore", description: "Xojo development platform" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },
@@ -119,6 +157,12 @@ export const templates: TemplateList = {
     { name: "Qt", filename: "Qt.gitignore", description: "Qt C++ framework projects" },
     { name: "VBA", filename: "VBA.gitignore", description: "VBA (Visual Basic for Applications)" },
     { name: "Packer", filename: "Packer.gitignore", description: "HashiCorp Packer projects" },
+    {
+      name: "Autotools",
+      filename: "Autotools.gitignore",
+      description: "GNU Autotools build system",
+    },
+    { name: "Waf", filename: "Waf.gitignore", description: "Waf build system" },
   ],
 };
 

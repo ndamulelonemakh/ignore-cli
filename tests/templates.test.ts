@@ -135,6 +135,47 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-11 batch 3", () => {
+    it("should include Ada, Raku, Scheme, Smalltalk, PureScript, Processing with correct filenames", () => {
+      const expected: Record<string, string> = {
+        Ada: "Ada.gitignore",
+        Raku: "Raku.gitignore",
+        Scheme: "Scheme.gitignore",
+        Smalltalk: "Smalltalk.gitignore",
+        PureScript: "PureScript.gitignore",
+        Processing: "Processing.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo with correct filenames", () => {
+      const expected: Record<string, string> = {
+        LangChain: "LangChain.gitignore",
+        UnrealEngine: "UnrealEngine.gitignore",
+        ROS: "ROS.gitignore",
+        CakePHP: "CakePHP.gitignore",
+        CodeIgniter: "CodeIgniter.gitignore",
+        Kohana: "Kohana.gitignore",
+        Typo3: "Typo3.gitignore",
+        Yeoman: "Yeoman.gitignore",
+        ZendFramework: "ZendFramework.gitignore",
+        OpenCart: "OpenCart.gitignore",
+        Plone: "Plone.gitignore",
+        Xojo: "Xojo.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include Autotools and Waf build tools with correct filenames", () => {
+      expect(findTemplate("Autotools")?.filename).toBe("Autotools.gitignore");
+      expect(findTemplate("Waf")?.filename).toBe("Waf.gitignore");
+    });
+  });
+
   describe("symlinked upstream templates", () => {
     it("should point Clojure and Fortran at their real (non-symlink) upstream content files", () => {
       // Upstream github/gitignore's Clojure.gitignore and Fortran.gitignore are
