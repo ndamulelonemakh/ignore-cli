@@ -110,6 +110,29 @@ describe("templates", () => {
         expect(names).toContain(name);
       }
     });
+
+    it("should include CUDA, D, Delphi, Haxe, Nix, TeX, CommonLisp, Magento, Salesforce, Grails, ExpressionEngine, Joomla, Qt, VBA, Packer", () => {
+      const names = getTemplateNames();
+      for (const name of [
+        "CUDA",
+        "D",
+        "Delphi",
+        "Haxe",
+        "Nix",
+        "TeX",
+        "CommonLisp",
+        "Magento",
+        "Salesforce",
+        "Grails",
+        "ExpressionEngine",
+        "Joomla",
+        "Qt",
+        "VBA",
+        "Packer",
+      ]) {
+        expect(names).toContain(name);
+      }
+    });
   });
 
   describe("symlinked upstream templates", () => {

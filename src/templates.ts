@@ -42,6 +42,13 @@ export const templates: TemplateList = {
     { name: "Clojure", filename: "Leiningen.gitignore", description: "Clojure/Leiningen projects" },
     { name: "Leiningen", filename: "Leiningen.gitignore", description: "Leiningen build tool" },
     { name: "Fortran", filename: "C++.gitignore", description: "Fortran projects" },
+    { name: "CUDA", filename: "CUDA.gitignore", description: "CUDA GPU projects" },
+    { name: "D", filename: "D.gitignore", description: "D language projects" },
+    { name: "Delphi", filename: "Delphi.gitignore", description: "Delphi/Object Pascal projects" },
+    { name: "Haxe", filename: "Haxe.gitignore", description: "Haxe language projects" },
+    { name: "Nix", filename: "Nix.gitignore", description: "Nix language projects" },
+    { name: "TeX", filename: "TeX.gitignore", description: "TeX/LaTeX documents" },
+    { name: "CommonLisp", filename: "CommonLisp.gitignore", description: "Common Lisp projects" },
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
@@ -65,6 +72,19 @@ export const templates: TemplateList = {
     { name: "Jekyll", filename: "Jekyll.gitignore", description: "Jekyll static site projects" },
     { name: "Sass", filename: "Sass.gitignore", description: "Sass/SCSS stylesheets" },
     { name: "Firebase", filename: "Firebase.gitignore", description: "Firebase projects" },
+    { name: "Magento", filename: "Magento.gitignore", description: "Magento e-commerce projects" },
+    {
+      name: "Salesforce",
+      filename: "Salesforce.gitignore",
+      description: "Salesforce/Force.com projects",
+    },
+    { name: "Grails", filename: "Grails.gitignore", description: "Grails framework projects" },
+    {
+      name: "ExpressionEngine",
+      filename: "ExpressionEngine.gitignore",
+      description: "ExpressionEngine CMS",
+    },
+    { name: "Joomla", filename: "Joomla.gitignore", description: "Joomla CMS projects" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },
@@ -96,6 +116,9 @@ export const templates: TemplateList = {
       filename: "Global/Linux.gitignore",
       description: "Linux operating system files",
     },
+    { name: "Qt", filename: "Qt.gitignore", description: "Qt C++ framework projects" },
+    { name: "VBA", filename: "VBA.gitignore", description: "VBA (Visual Basic for Applications)" },
+    { name: "Packer", filename: "Packer.gitignore", description: "HashiCorp Packer projects" },
   ],
 };
 
