@@ -268,6 +268,52 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-11 batch 5", () => {
+    it("should include AL, Elisp, HIP, MoonBit, Zephir with correct filenames", () => {
+      const expected: Record<string, string> = {
+        AL: "AL.gitignore",
+        Elisp: "Elisp.gitignore",
+        HIP: "HIP.gitignore",
+        MoonBit: "MoonBit.gitignore",
+        Zephir: "Zephir.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include ChefCookbook, ForceDotCom, GWT, SugarCRM, Qooxdoo with correct filenames", () => {
+      const expected: Record<string, string> = {
+        ChefCookbook: "ChefCookbook.gitignore",
+        ForceDotCom: "ForceDotCom.gitignore",
+        GWT: "GWT.gitignore",
+        SugarCRM: "SugarCRM.gitignore",
+        Qooxdoo: "Qooxdoo.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include JENKINS_HOME, SketchUp, TestComplete, Eagle, Gcov, SCons, ArchLinuxPackages, AppceleratorTitanium, Lilypond, OracleForms with correct filenames", () => {
+      const expected: Record<string, string> = {
+        JENKINS_HOME: "JENKINS_HOME.gitignore",
+        SketchUp: "SketchUp.gitignore",
+        TestComplete: "TestComplete.gitignore",
+        Eagle: "Eagle.gitignore",
+        Gcov: "Gcov.gitignore",
+        SCons: "SCons.gitignore",
+        ArchLinuxPackages: "ArchLinuxPackages.gitignore",
+        AppceleratorTitanium: "AppceleratorTitanium.gitignore",
+        Lilypond: "Lilypond.gitignore",
+        OracleForms: "OracleForms.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+  });
+
   describe("serviceUrls", () => {
     it("should have git and docker URLs", () => {
       expect(serviceUrls).toHaveProperty("git");
