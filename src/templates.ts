@@ -59,6 +59,16 @@ export const templates: TemplateList = {
       filename: "Processing.gitignore",
       description: "Processing language projects",
     },
+    {
+      name: "Actionscript",
+      filename: "Actionscript.gitignore",
+      description: "ActionScript projects",
+    },
+    { name: "Agda", filename: "Agda.gitignore", description: "Agda language projects" },
+    { name: "Coq", filename: "Coq.gitignore", description: "Coq proof assistant projects" },
+    { name: "Gleam", filename: "Gleam.gitignore", description: "Gleam language projects" },
+    { name: "Idris", filename: "Idris.gitignore", description: "Idris language projects" },
+    { name: "Lean", filename: "Lean.gitignore", description: "Lean theorem prover projects" },
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
@@ -123,6 +133,29 @@ export const templates: TemplateList = {
     },
     { name: "Plone", filename: "Plone.gitignore", description: "Plone CMS projects" },
     { name: "Xojo", filename: "Xojo.gitignore", description: "Xojo development platform" },
+    {
+      name: "AppEngine",
+      filename: "AppEngine.gitignore",
+      description: "Google App Engine projects",
+    },
+    {
+      name: "Ballerina",
+      filename: "Ballerina.gitignore",
+      description: "Ballerina language projects",
+    },
+    { name: "Phalcon", filename: "Phalcon.gitignore", description: "Phalcon PHP framework" },
+    {
+      name: "PlayFramework",
+      filename: "PlayFramework.gitignore",
+      description: "Play Framework projects",
+    },
+    {
+      name: "Prestashop",
+      filename: "Prestashop.gitignore",
+      description: "PrestaShop e-commerce projects",
+    },
+    { name: "ReScript", filename: "ReScript.gitignore", description: "ReScript language projects" },
+    { name: "Yii", filename: "Yii.gitignore", description: "Yii PHP framework" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },
@@ -163,6 +196,21 @@ export const templates: TemplateList = {
       description: "GNU Autotools build system",
     },
     { name: "Waf", filename: "Waf.gitignore", description: "Waf build system" },
+    {
+      name: "GitBook",
+      filename: "GitBook.gitignore",
+      description: "GitBook documentation projects",
+    },
+    { name: "GitHubPages", filename: "GitHubPages.gitignore", description: "GitHub Pages sites" },
+    { name: "JBoss", filename: "JBoss.gitignore", description: "JBoss application server" },
+    { name: "KiCad", filename: "KiCad.gitignore", description: "KiCad EDA projects" },
+    {
+      name: "TurboGears2",
+      filename: "TurboGears2.gitignore",
+      description: "TurboGears2 Python framework",
+    },
+    { name: "ExtJs", filename: "ExtJs.gitignore", description: "Ext JS framework projects" },
+    { name: "Luau", filename: "Luau.gitignore", description: "Luau language projects" },
   ],
 };
 
