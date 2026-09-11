@@ -71,6 +71,24 @@ describe("templates", () => {
     });
   });
 
+  describe("newly added templates", () => {
+    it("should include Zig, Nim, Objective-C, Godot, Nestjs, Gradle, Maven, CMake", () => {
+      const names = getTemplateNames();
+      for (const name of [
+        "Zig",
+        "Nim",
+        "Objective-C",
+        "Godot",
+        "Nestjs",
+        "Gradle",
+        "Maven",
+        "CMake",
+      ]) {
+        expect(names).toContain(name);
+      }
+    });
+  });
+
   describe("getTemplateNames", () => {
     it("should return an array of template names", () => {
       const names = getTemplateNames();

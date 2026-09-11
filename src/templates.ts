@@ -24,6 +24,13 @@ export const templates: TemplateList = {
     { name: "Julia", filename: "Julia.gitignore", description: "Julia projects" },
     { name: "Lua", filename: "Lua.gitignore", description: "Lua projects" },
     { name: "Elm", filename: "Elm.gitignore", description: "Elm projects" },
+    { name: "Zig", filename: "Zig.gitignore", description: "Zig language projects" },
+    { name: "Nim", filename: "Nim.gitignore", description: "Nim language projects" },
+    {
+      name: "Objective-C",
+      filename: "Objective-C.gitignore",
+      description: "Objective-C projects",
+    },
     // Note: Clojure.gitignore is intentionally omitted. Upstream
     // github/gitignore's Clojure.gitignore file contains only the literal
     // placeholder text "Leiningen.gitignore" (not real ignore rules), so it
@@ -40,6 +47,8 @@ export const templates: TemplateList = {
     { name: "Nextjs", filename: "Nextjs.gitignore", description: "Next.js projects" },
     { name: "Terraform", filename: "Terraform.gitignore", description: "Terraform IaC projects" },
     { name: "Unity", filename: "Unity.gitignore", description: "Unity game engine projects" },
+    { name: "Godot", filename: "Godot.gitignore", description: "Godot game engine projects" },
+    { name: "Nestjs", filename: "Nestjs.gitignore", description: "NestJS projects" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },
@@ -53,6 +62,9 @@ export const templates: TemplateList = {
     { name: "Emacs", filename: "Global/Emacs.gitignore", description: "Emacs editor" },
     { name: "Xcode", filename: "Global/Xcode.gitignore", description: "Xcode IDE" },
     { name: "Eclipse", filename: "Global/Eclipse.gitignore", description: "Eclipse IDE" },
+    { name: "Gradle", filename: "Gradle.gitignore", description: "Gradle build tool" },
+    { name: "Maven", filename: "Maven.gitignore", description: "Maven build tool" },
+    { name: "CMake", filename: "CMake.gitignore", description: "CMake build tool" },
     {
       name: "macOS",
       filename: "Global/macOS.gitignore",
