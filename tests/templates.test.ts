@@ -50,6 +50,79 @@ describe("templates", () => {
     });
   });
 
+  describe("Global/ editor and OS templates", () => {
+    it("should reference filenames under the Global/ directory for editor and OS tools", () => {
+      // These upstream files live under github/gitignore's Global/ directory, not the repo root.
+      for (const name of [
+        "VisualStudioCode",
+        "JetBrains",
+        "Vim",
+        "Emacs",
+        "Xcode",
+        "Eclipse",
+        "macOS",
+        "Windows",
+        "Linux",
+      ]) {
+        const template = findTemplate(name);
+        expect(template).toBeDefined();
+        expect(template?.filename).toBe(`Global/${name}.gitignore`);
+      }
+    });
+  });
+
+  describe("newly added templates", () => {
+    it("should include Zig, Nim, Objective-C, Godot, Nestjs, Gradle, Maven, CMake", () => {
+      const names = getTemplateNames();
+      for (const name of [
+        "Zig",
+        "Nim",
+        "Objective-C",
+        "Godot",
+        "Nestjs",
+        "Gradle",
+        "Maven",
+        "CMake",
+      ]) {
+        expect(names).toContain(name);
+      }
+    });
+
+    it("should include Erlang, Perl, Racket, Clojure, Leiningen, Fortran, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase", () => {
+      const names = getTemplateNames();
+      for (const name of [
+        "Erlang",
+        "Perl",
+        "Racket",
+        "Clojure",
+        "Leiningen",
+        "Fortran",
+        "Dotnet",
+        "bun",
+        "Composer",
+        "Symfony",
+        "WordPress",
+        "Drupal",
+        "Jekyll",
+        "Sass",
+        "Firebase",
+      ]) {
+        expect(names).toContain(name);
+      }
+    });
+  });
+
+  describe("symlinked upstream templates", () => {
+    it("should point Clojure and Fortran at their real (non-symlink) upstream content files", () => {
+      // Upstream github/gitignore's Clojure.gitignore and Fortran.gitignore are
+      // symlinks; GitHub's raw content endpoint returns the literal target
+      // filename text for symlinks rather than resolved content. Point these
+      // entries directly at the real target files instead.
+      expect(findTemplate("Clojure")?.filename).toBe("Leiningen.gitignore");
+      expect(findTemplate("Fortran")?.filename).toBe("C++.gitignore");
+    });
+  });
+
   describe("getTemplateNames", () => {
     it("should return an array of template names", () => {
       const names = getTemplateNames();
