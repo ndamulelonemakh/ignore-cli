@@ -8,7 +8,7 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ## Features
 
-- 📥 Download ignore file templates for 136+ languages, frameworks, and tools
+- 📥 Download ignore file templates for 172+ languages, frameworks, and tools
 - 🔍 Search and discover available templates
 - 🐳 Support for both Git and Docker ignore files
 - ⚡ Fast downloads from GitHub's official gitignore repository
@@ -68,13 +68,13 @@ ignore find node
 ## Available Templates
 
 ### Languages
-C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C, Erlang, Perl, Racket, Clojure, Leiningen, Fortran, CUDA, D, Delphi, Haxe, Nix, TeX, CommonLisp, Ada, Raku, Scheme, Smalltalk, PureScript, Processing, Actionscript, Agda, Coq, Gleam, Idris, Lean, AL, Elisp, HIP, MoonBit, Zephir
+C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixir, OCaml, R, Julia, Lua, Elm, Zig, Nim, Objective-C, Erlang, Perl, Racket, Clojure, Leiningen, Fortran, CUDA, D, Delphi, Haxe, Nix, TeX, CommonLisp, Ada, Raku, Scheme, Smalltalk, PureScript, Processing, Actionscript, Agda, Coq, Gleam, Idris, Lean, AL, Elisp, HIP, MoonBit, Zephir, DM, Fancy, Opa, Solidity-Remix
 
 ### Frameworks
-Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase, Magento, Salesforce, Grails, ExpressionEngine, Joomla, LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo, AppEngine, Ballerina, Phalcon, PlayFramework, Prestashop, ReScript, Yii, ChefCookbook, ForceDotCom, GWT, SugarCRM, Qooxdoo
+Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase, Magento, Salesforce, Grails, ExpressionEngine, Joomla, LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo, AppEngine, Ballerina, Phalcon, PlayFramework, Prestashop, ReScript, Yii, ChefCookbook, ForceDotCom, GWT, SugarCRM, Qooxdoo, CFWheels, Concrete5, CraftCMS, EPiServer, FuelPHP, LemonStand, Lithium, Nanoc, RhodesRhomobile, SeamGen, SymphonyCMS, Textpattern
 
 ### Tools
-VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf, GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau, JENKINS_HOME, SketchUp, TestComplete, Eagle, Gcov, SCons, ArchLinuxPackages, AppceleratorTitanium, Lilypond, OracleForms
+VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf, GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau, JENKINS_HOME, SketchUp, TestComplete, Eagle, Gcov, SCons, ArchLinuxPackages, AppceleratorTitanium, Lilypond, OracleForms, AdventureGameStudio, FlaxEngine, IAR, IGORPro, Katalon, LabVIEW, Lasal, Mercury, MetaProgrammingSystem, ModelSim, Modelica, SSDT-sqlproj, Scrivener, Sdcc, SolidWorks, Stella, TwinCAT3, VVVV, ecu.test, Finale
 
 ## How it works
 
