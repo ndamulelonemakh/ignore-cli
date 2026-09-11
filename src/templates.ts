@@ -69,6 +69,15 @@ export const templates: TemplateList = {
     { name: "Gleam", filename: "Gleam.gitignore", description: "Gleam language projects" },
     { name: "Idris", filename: "Idris.gitignore", description: "Idris language projects" },
     { name: "Lean", filename: "Lean.gitignore", description: "Lean theorem prover projects" },
+    {
+      name: "AL",
+      filename: "AL.gitignore",
+      description: "AL (Dynamics 365 Business Central) projects",
+    },
+    { name: "Elisp", filename: "Elisp.gitignore", description: "Emacs Lisp projects" },
+    { name: "HIP", filename: "HIP.gitignore", description: "AMD HIP (ROCm) GPU projects" },
+    { name: "MoonBit", filename: "MoonBit.gitignore", description: "MoonBit language projects" },
+    { name: "Zephir", filename: "Zephir.gitignore", description: "Zephir language projects" },
   ],
   frameworks: [
     { name: "Node", filename: "Node.gitignore", description: "Node.js projects" },
@@ -156,6 +165,19 @@ export const templates: TemplateList = {
     },
     { name: "ReScript", filename: "ReScript.gitignore", description: "ReScript language projects" },
     { name: "Yii", filename: "Yii.gitignore", description: "Yii PHP framework" },
+    {
+      name: "ChefCookbook",
+      filename: "ChefCookbook.gitignore",
+      description: "Chef cookbook projects",
+    },
+    {
+      name: "ForceDotCom",
+      filename: "ForceDotCom.gitignore",
+      description: "Force.com/Salesforce.com projects",
+    },
+    { name: "GWT", filename: "GWT.gitignore", description: "Google Web Toolkit projects" },
+    { name: "SugarCRM", filename: "SugarCRM.gitignore", description: "SugarCRM projects" },
+    { name: "Qooxdoo", filename: "Qooxdoo.gitignore", description: "Qooxdoo JavaScript framework" },
   ],
   tools: [
     { name: "VisualStudio", filename: "VisualStudio.gitignore", description: "Visual Studio IDE" },
@@ -211,6 +233,40 @@ export const templates: TemplateList = {
     },
     { name: "ExtJs", filename: "ExtJs.gitignore", description: "Ext JS framework projects" },
     { name: "Luau", filename: "Luau.gitignore", description: "Luau language projects" },
+    {
+      name: "JENKINS_HOME",
+      filename: "JENKINS_HOME.gitignore",
+      description: "Jenkins home directory",
+    },
+    {
+      name: "SketchUp",
+      filename: "SketchUp.gitignore",
+      description: "SketchUp 3D modeling projects",
+    },
+    {
+      name: "TestComplete",
+      filename: "TestComplete.gitignore",
+      description: "TestComplete automated testing",
+    },
+    { name: "Eagle", filename: "Eagle.gitignore", description: "Eagle PCB layout tool" },
+    { name: "Gcov", filename: "Gcov.gitignore", description: "GCC coverage testing tool" },
+    { name: "SCons", filename: "SCons.gitignore", description: "SCons build tool projects" },
+    {
+      name: "ArchLinuxPackages",
+      filename: "ArchLinuxPackages.gitignore",
+      description: "Arch Linux package builds",
+    },
+    {
+      name: "AppceleratorTitanium",
+      filename: "AppceleratorTitanium.gitignore",
+      description: "Appcelerator Titanium projects",
+    },
+    { name: "Lilypond", filename: "Lilypond.gitignore", description: "LilyPond music engraving" },
+    {
+      name: "OracleForms",
+      filename: "OracleForms.gitignore",
+      description: "Oracle Forms projects",
+    },
   ],
 };
 
