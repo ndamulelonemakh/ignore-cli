@@ -314,6 +314,68 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-11 batch 6", () => {
+    it("should include DM, Fancy, Opa, Solidity-Remix with correct filenames", () => {
+      const expected: Record<string, string> = {
+        DM: "DM.gitignore",
+        Fancy: "Fancy.gitignore",
+        Opa: "Opa.gitignore",
+        "Solidity-Remix": "Solidity-Remix.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include CFWheels, Concrete5, CraftCMS, EPiServer, FuelPHP, LemonStand, Lithium, Nanoc, RhodesRhomobile, SeamGen, SymphonyCMS, Textpattern with correct filenames", () => {
+      const expected: Record<string, string> = {
+        CFWheels: "CFWheels.gitignore",
+        Concrete5: "Concrete5.gitignore",
+        CraftCMS: "CraftCMS.gitignore",
+        EPiServer: "EPiServer.gitignore",
+        FuelPHP: "FuelPHP.gitignore",
+        LemonStand: "LemonStand.gitignore",
+        Lithium: "Lithium.gitignore",
+        Nanoc: "Nanoc.gitignore",
+        RhodesRhomobile: "RhodesRhomobile.gitignore",
+        SeamGen: "SeamGen.gitignore",
+        SymphonyCMS: "SymphonyCMS.gitignore",
+        Textpattern: "Textpattern.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should include AdventureGameStudio, FlaxEngine, IAR, IGORPro, Katalon, LabVIEW, Lasal, Mercury, MetaProgrammingSystem, ModelSim, Modelica, SSDT-sqlproj, Scrivener, Sdcc, SolidWorks, Stella, TwinCAT3, VVVV, ecu.test, Finale with correct filenames", () => {
+      const expected: Record<string, string> = {
+        AdventureGameStudio: "AdventureGameStudio.gitignore",
+        FlaxEngine: "FlaxEngine.gitignore",
+        IAR: "IAR.gitignore",
+        IGORPro: "IGORPro.gitignore",
+        Katalon: "Katalon.gitignore",
+        LabVIEW: "LabVIEW.gitignore",
+        Lasal: "Lasal.gitignore",
+        Mercury: "Mercury.gitignore",
+        MetaProgrammingSystem: "MetaProgrammingSystem.gitignore",
+        ModelSim: "ModelSim.gitignore",
+        Modelica: "Modelica.gitignore",
+        "SSDT-sqlproj": "SSDT-sqlproj.gitignore",
+        Scrivener: "Scrivener.gitignore",
+        Sdcc: "Sdcc.gitignore",
+        SolidWorks: "SolidWorks.gitignore",
+        Stella: "Stella.gitignore",
+        TwinCAT3: "TwinCAT3.gitignore",
+        VVVV: "VVVV.gitignore",
+        "ecu.test": "ecu.test.gitignore",
+        Finale: "Finale.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+  });
+
   describe("serviceUrls", () => {
     it("should have git and docker URLs", () => {
       expect(serviceUrls).toHaveProperty("git");
