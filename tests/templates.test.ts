@@ -376,6 +376,29 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-13 batch 7 (Global/ editor and tool templates)", () => {
+    it("should include Cursor, Zed, SublimeText, NetBeans, Vagrant, VirtualEnv, MATLAB, Mercurial, SVN, TextMate, Redis, Kate, Ansible with correct Global/ filenames", () => {
+      const expected: Record<string, string> = {
+        Cursor: "Global/Cursor.gitignore",
+        Zed: "Global/Zed.gitignore",
+        SublimeText: "Global/SublimeText.gitignore",
+        NetBeans: "Global/NetBeans.gitignore",
+        Vagrant: "Global/Vagrant.gitignore",
+        VirtualEnv: "Global/VirtualEnv.gitignore",
+        MATLAB: "Global/MATLAB.gitignore",
+        Mercurial: "Global/Mercurial.gitignore",
+        SVN: "Global/SVN.gitignore",
+        TextMate: "Global/TextMate.gitignore",
+        Redis: "Global/Redis.gitignore",
+        Kate: "Global/Kate.gitignore",
+        Ansible: "Global/Ansible.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+  });
+
   describe("serviceUrls", () => {
     it("should have git and docker URLs", () => {
       expect(serviceUrls).toHaveProperty("git");
