@@ -8,7 +8,7 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ## Features
 
-- 📥 Download ignore file templates for 196+ languages, frameworks, and tools
+- 📥 Download ignore file templates for 197+ languages, frameworks, and tools
 - 🔍 Search and discover available templates
 - 🐳 Support for both Git and Docker ignore files
 - ⚡ Fast downloads from GitHub's official gitignore repository
