@@ -8,7 +8,7 @@ A fast command line tool for adding `.gitignore` and `.dockerignore` files to yo
 
 ## Features
 
-- 📥 Download ignore file templates for 185+ languages, frameworks, and tools
+- 📥 Download ignore file templates for 196+ languages, frameworks, and tools
 - 🔍 Search and discover available templates
 - 🐳 Support for both Git and Docker ignore files
 - ⚡ Fast downloads from GitHub's official gitignore repository
@@ -74,7 +74,7 @@ C, C++, Go, Java, Kotlin, Python, Ruby, Rust, Swift, Dart, Haskell, Scala, Elixi
 Node, Android, Rails, Laravel, Flutter, Deno, Angular, Nextjs, Terraform, Unity, Godot, Nestjs, Dotnet, bun, Composer, Symfony, WordPress, Drupal, Jekyll, Sass, Firebase, Magento, Salesforce, Grails, ExpressionEngine, Joomla, LangChain, UnrealEngine, ROS, CakePHP, CodeIgniter, Kohana, Typo3, Yeoman, ZendFramework, OpenCart, Plone, Xojo, AppEngine, Ballerina, Phalcon, PlayFramework, Prestashop, ReScript, Yii, ChefCookbook, ForceDotCom, GWT, SugarCRM, Qooxdoo, CFWheels, Concrete5, CraftCMS, EPiServer, FuelPHP, LemonStand, Lithium, Nanoc, RhodesRhomobile, SeamGen, SymphonyCMS, Textpattern
 
 ### Tools
-VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf, GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau, JENKINS_HOME, SketchUp, TestComplete, Eagle, Gcov, SCons, ArchLinuxPackages, AppceleratorTitanium, Lilypond, OracleForms, AdventureGameStudio, FlaxEngine, IAR, IGORPro, Katalon, LabVIEW, Lasal, Mercury, MetaProgrammingSystem, ModelSim, Modelica, SSDT-sqlproj, Scrivener, Sdcc, SolidWorks, Stella, TwinCAT3, VVVV, ecu.test, Finale, Cursor, Zed, SublimeText, NetBeans, Vagrant, VirtualEnv, MATLAB, Mercurial, SVN, TextMate, Redis, Kate, Ansible
+VisualStudio, VisualStudioCode, JetBrains, Vim, Emacs, Xcode, Eclipse, macOS, Windows, Linux, Gradle, Maven, CMake, Qt, VBA, Packer, Autotools, Waf, GitBook, GitHubPages, JBoss, KiCad, TurboGears2, ExtJs, Luau, JENKINS_HOME, SketchUp, TestComplete, Eagle, Gcov, SCons, ArchLinuxPackages, AppceleratorTitanium, Lilypond, OracleForms, AdventureGameStudio, FlaxEngine, IAR, IGORPro, Katalon, LabVIEW, Lasal, Mercury, MetaProgrammingSystem, ModelSim, Modelica, SSDT-sqlproj, Scrivener, Sdcc, SolidWorks, Stella, TwinCAT3, VVVV, ecu.test, Finale, Cursor, Zed, SublimeText, NetBeans, Vagrant, VirtualEnv, MATLAB, Mercurial, SVN, TextMate, Redis, Kate, Ansible, SBT, PlatformIO, Octave, LibreOffice, MicrosoftOffice, Dropbox, GPG, mise, Lefthook, JEnv, Backup, Archives
 
 ## How it works
 

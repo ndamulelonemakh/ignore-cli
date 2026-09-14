@@ -399,6 +399,35 @@ describe("templates", () => {
     });
   });
 
+  describe("templates added 2026-09-14 batch 8", () => {
+    it("should include SBT, PlatformIO, LibreOffice, MicrosoftOffice, Dropbox, GPG, mise, Lefthook, JEnv, Backup, Archives with correct filenames", () => {
+      const expected: Record<string, string> = {
+        SBT: "Global/SBT.gitignore",
+        PlatformIO: "Global/PlatformIO.gitignore",
+        LibreOffice: "Global/LibreOffice.gitignore",
+        MicrosoftOffice: "Global/MicrosoftOffice.gitignore",
+        Dropbox: "Global/Dropbox.gitignore",
+        GPG: "Global/GPG.gitignore",
+        mise: "Global/mise.gitignore",
+        Lefthook: "Global/Lefthook.gitignore",
+        JEnv: "Global/JEnv.gitignore",
+        Backup: "Global/Backup.gitignore",
+        Archives: "Global/Archives.gitignore",
+      };
+      for (const [name, filename] of Object.entries(expected)) {
+        expect(findTemplate(name)?.filename).toBe(filename);
+      }
+    });
+
+    it("should point Octave at its real (non-symlink) upstream content file", () => {
+      // Upstream github/gitignore's Global/Octave.gitignore is a symlink;
+      // GitHub's raw content endpoint returns the literal target filename
+      // text for symlinks rather than resolved content. Point this entry
+      // directly at the real target file instead.
+      expect(findTemplate("Octave")?.filename).toBe("Global/MATLAB.gitignore");
+    });
+  });
+
   describe("serviceUrls", () => {
     it("should have git and docker URLs", () => {
       expect(serviceUrls).toHaveProperty("git");
