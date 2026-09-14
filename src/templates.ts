@@ -351,6 +351,31 @@ export const templates: TemplateList = {
       description: "ecu.test workspace projects",
     },
     { name: "Finale", filename: "Finale.gitignore", description: "Finale music notation projects" },
+    { name: "Cursor", filename: "Global/Cursor.gitignore", description: "Cursor AI code editor" },
+    { name: "Zed", filename: "Global/Zed.gitignore", description: "Zed code editor" },
+    {
+      name: "SublimeText",
+      filename: "Global/SublimeText.gitignore",
+      description: "Sublime Text editor",
+    },
+    { name: "NetBeans", filename: "Global/NetBeans.gitignore", description: "NetBeans IDE" },
+    { name: "Vagrant", filename: "Global/Vagrant.gitignore", description: "Vagrant environments" },
+    {
+      name: "VirtualEnv",
+      filename: "Global/VirtualEnv.gitignore",
+      description: "Python virtualenv directories",
+    },
+    { name: "MATLAB", filename: "Global/MATLAB.gitignore", description: "MATLAB projects" },
+    {
+      name: "Mercurial",
+      filename: "Global/Mercurial.gitignore",
+      description: "Mercurial (hg) version control",
+    },
+    { name: "SVN", filename: "Global/SVN.gitignore", description: "Subversion version control" },
+    { name: "TextMate", filename: "Global/TextMate.gitignore", description: "TextMate editor" },
+    { name: "Redis", filename: "Global/Redis.gitignore", description: "Redis dump files" },
+    { name: "Kate", filename: "Global/Kate.gitignore", description: "Kate text editor" },
+    { name: "Ansible", filename: "Global/Ansible.gitignore", description: "Ansible retry files" },
   ],
 };
 
