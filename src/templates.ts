@@ -376,6 +376,51 @@ export const templates: TemplateList = {
     { name: "Redis", filename: "Global/Redis.gitignore", description: "Redis dump files" },
     { name: "Kate", filename: "Global/Kate.gitignore", description: "Kate text editor" },
     { name: "Ansible", filename: "Global/Ansible.gitignore", description: "Ansible retry files" },
+    { name: "SBT", filename: "Global/SBT.gitignore", description: "Scala SBT build tool" },
+    {
+      name: "PlatformIO",
+      filename: "Global/PlatformIO.gitignore",
+      description: "PlatformIO embedded development",
+    },
+    // Note: Upstream Global/Octave.gitignore is a symlink whose raw GitHub
+    // content is just the literal target filename text "MATLAB.gitignore"
+    // (not real ignore rules). Point this entry directly at the real target
+    // file (Global/MATLAB.gitignore) so the CLI downloads working content
+    // (verified 2026-09-14).
+    { name: "Octave", filename: "Global/MATLAB.gitignore", description: "GNU Octave projects" },
+    {
+      name: "LibreOffice",
+      filename: "Global/LibreOffice.gitignore",
+      description: "LibreOffice lock files",
+    },
+    {
+      name: "MicrosoftOffice",
+      filename: "Global/MicrosoftOffice.gitignore",
+      description: "Microsoft Office temp/lock files",
+    },
+    { name: "Dropbox", filename: "Global/Dropbox.gitignore", description: "Dropbox sync files" },
+    { name: "GPG", filename: "Global/GPG.gitignore", description: "GnuPG keyring files" },
+    {
+      name: "mise",
+      filename: "Global/mise.gitignore",
+      description: "mise polyglot runtime manager",
+    },
+    {
+      name: "Lefthook",
+      filename: "Global/Lefthook.gitignore",
+      description: "Lefthook git hooks manager",
+    },
+    { name: "JEnv", filename: "Global/JEnv.gitignore", description: "jenv Java version manager" },
+    {
+      name: "Backup",
+      filename: "Global/Backup.gitignore",
+      description: "Common backup file suffixes",
+    },
+    {
+      name: "Archives",
+      filename: "Global/Archives.gitignore",
+      description: "Common archive file formats",
+    },
   ],
 };
 
