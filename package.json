@@ -53,14 +53,14 @@
     "LICENSE"
   ],
   "dependencies": {
-    "chalk": "^5.4.1",
-    "commander": "^13.0.0",
-    "ora": "^8.1.1"
+    "chalk": "^5.6.2",
+    "commander": "^13.1.0",
+    "ora": "^8.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.10.5",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.5"
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
   }
 }
